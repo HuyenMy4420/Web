@@ -32,7 +32,6 @@ $product = mysqli_query($conn, "SELECT *FROM product");
         <ul class ="nav nav-pills nav-stacked " style="padding-left:20px">
             <p><a href = "http://localhost/xampp/new/admin_home.php"><i class = "glyphicon glyphicon-list-alt"></i>Quản lý mặt hàng</a></p>
             <p><a href = "http://localhost/xampp/new/admin_add.php"><i class = "glyphicon glyphicon-plus"></i>Thêm sản phẩm</a></p>
-            <p><a href = "http://localhost/xampp/new/admin_list.php"><i class = "glyphicon glyphicon-th-list"></i>Danh mục sản phẩm</a></p>
             <p><a href = "http://localhost/xampp/new/admin_chat.php"><i class = "glyphicon glyphicon-comment"></i>Chat</a></p>
             <p><a href = "#"><i class = "glyphicon glyphicon-log-out"></i>Đăng xuất</a></p>
         </ul>
@@ -44,11 +43,11 @@ $product = mysqli_query($conn, "SELECT *FROM product");
                             <thead>
                                 <tr>
                                     <th>Tên sản phẩm</th>
-                                    <th>Mã sản phẩm</th>
+                                    <!-- <th>Mã sản phẩm</th> -->
                                     <th>Giá(VND)</th>
-                                    <th>Giá khuyến mãi</th>
+                                    <!-- <th>Giá khuyến mãi</th> -->
                                     <th>Số lượng</th>
-                                    <th>Phân loại</th>
+                                    <th>Nhà cung cấp</th>
                                     <th>Trạng thái</th>   
                                 </tr>
                             </thead>
@@ -56,9 +55,9 @@ $product = mysqli_query($conn, "SELECT *FROM product");
                         <?php foreach ($product as $key => $value){ ?>
                             <tr>
                                 <td><?php echo $value['NameProduct'] ?></td>
-                                <td><?php echo $value['Code'] ?></td>
+                                <!-- <td><?php echo $value['Code'] ?></td> -->
                                 <td><?php echo $value['Price'] ?></td>
-                                <td><?php echo $value['Price1'] ?></td>
+                                <!-- <td><?php echo $value['Price1'] ?></td> -->
                                 <td><?php echo $value['Amount'] ?></td>
                                 <td><?php echo $value['Type'] ?></td>
                                 <td> &nbsp;<a href="read_product.php?ID=<?php echo $value['ID']; ?>"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;

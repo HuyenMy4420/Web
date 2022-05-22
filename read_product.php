@@ -22,7 +22,7 @@ if(isset($_POST["saveproduct"])){
     $file_name = $file['name'];
     move_uploaded_file($file['tmp_name'],'uploads/'.$file_name);
   }
- $sql = "UPDATE products SET NameProduct='$NameProduct', Code='$Code', Price='$Price', Price1='$Price1', Amount='$Amount', Description='$Description',Type='$Type',Tag='$Tag',image='$file_name' WHERE ID=$ID";
+ $sql = "UPDATE product SET NameProduct='$NameProduct', Code='$Code', Price='$Price', Price1='$Price1', Amount='$Amount', Description='$Description',Type='$Type',Tag='$Tag',image='$file_name' WHERE ID=$ID";
  $query = mysqli_query($conn,$sql);
  if(query){
    header('location: admin_home.php');

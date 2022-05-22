@@ -14,7 +14,7 @@ if(isset($_POST["saveproduct"])){
     $file_name = $file['name'];
     move_uploaded_file($file['tmp_name'],'uploads/'.$file_name);
   }
- $sql = "INSERT INTO product(NameProduct, Code, Price, Price1, Amount, Description,Type,Tag,image) VALUES('$NameProduct', '$Code','$Price', '$Price1','$Amount','$Description','$Type','$Tag','$file_name')";
+ $sql = "INSERT INTO products(NameProduct, Code, Price, Price1, Amount, Description,Type,Tag,image) VALUES('$NameProduct', '$Code','$Price', '$Price1','$Amount','$Description','$Type','$Tag','$file_name')";
  $query = mysqli_query($conn,$sql);
  if(query){
    header('location: admin_home.php');
@@ -38,7 +38,7 @@ if(isset($_POST["saveproduct"])){
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <img src="logo.jpg" style="height:70px"></div>
+      <img src="" style="height:70px"></div>
     </div>
 </nav>
   
@@ -49,7 +49,7 @@ if(isset($_POST["saveproduct"])){
             <p><a href = "http://localhost/xampp/new/admin_home.php""><i class = "glyphicon glyphicon-list-alt"></i>Quản lý mặt hàng</a></p>
             <p><a href = "http://localhost/xampp/new/admin_add.php"><i class = "glyphicon glyphicon-plus"></i>Thêm sản phẩm</a></p>
             <p><a href = "#"><i class = "glyphicon glyphicon-comment"></i>Chat</a></p>
-            <p><a href = "#"><i class = "glyphicon glyphicon-log-out"></i>Đăng xuất</a></p>
+            <p><a href = "http://localhost/xampp/new/webBook-main/"><i class = "glyphicon glyphicon-log-out"></i>Đăng xuất</a></p>
         </ul>
     </div>
     

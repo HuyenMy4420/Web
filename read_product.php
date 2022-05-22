@@ -2,7 +2,7 @@
 include_once('db_conn.php');	
 if(isset($_GET['ID'])){
     $ID = $_GET['ID'];
-    $sql = "SELECT *FROM product WHERE ID=$ID";
+    $sql = "SELECT *FROM products WHERE ID=$ID";
     $product = mysqli_query($conn, $sql);
     $cate = mysqli_fetch_assoc($product);
   
@@ -22,7 +22,7 @@ if(isset($_POST["saveproduct"])){
     $file_name = $file['name'];
     move_uploaded_file($file['tmp_name'],'uploads/'.$file_name);
   }
- $sql = "UPDATE product SET NameProduct='$NameProduct', Code='$Code', Price='$Price', Price1='$Price1', Amount='$Amount', Description='$Description',Type='$Type',Tag='$Tag',image='$file_name' WHERE ID=$ID";
+ $sql = "UPDATE products SET NameProduct='$NameProduct', Code='$Code', Price='$Price', Price1='$Price1', Amount='$Amount', Description='$Description',Type='$Type',Tag='$Tag',image='$file_name' WHERE ID=$ID";
  $query = mysqli_query($conn,$sql);
  if(query){
    header('location: admin_home.php');
@@ -58,7 +58,7 @@ if(isset($_POST["saveproduct"])){
             <p><a href = "http://localhost/xampp/new/admin_home.php""><i class = "glyphicon glyphicon-list-alt"></i>Quản lý mặt hàng</a></p>
             <p><a href = "http://localhost/xampp/new/admin_add.php"><i class = "glyphicon glyphicon-plus"></i>Thêm sản phẩm</a></p>
             <p><a href = "#"><i class = "glyphicon glyphicon-comment"></i>Chat</a></p>
-            <p><a href = "#"><i class = "glyphicon glyphicon-log-out"></i>Đăng xuất</a></p>
+            <p><a href = "http://localhost/xampp/new/webBook-main/"><i class = "glyphicon glyphicon-log-out"></i>Đăng xuất</a></p>
         </ul>
     </div>
     <div class="col-sm-10 "> 

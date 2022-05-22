@@ -1,6 +1,6 @@
 <?php 
 include_once('db_conn.php');
-$product = mysqli_query($conn, "SELECT *FROM product");
+$product = mysqli_query($conn, "SELECT *FROM products");
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +22,7 @@ $product = mysqli_query($conn, "SELECT *FROM product");
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <img src="logo.jpg" style="height:70px"></div>
+      <img src="" style="height:70px"></div>
     </div>
 </nav>
   
@@ -32,8 +32,8 @@ $product = mysqli_query($conn, "SELECT *FROM product");
         <ul class ="nav nav-pills nav-stacked " style="padding-left:20px">
             <p><a href = "http://localhost/xampp/new/admin_home.php"><i class = "glyphicon glyphicon-list-alt"></i>Quản lý mặt hàng</a></p>
             <p><a href = "http://localhost/xampp/new/admin_add.php"><i class = "glyphicon glyphicon-plus"></i>Thêm sản phẩm</a></p>
-            <p><a href = "http://localhost/xampp/new/admin_chat.php"><i class = "glyphicon glyphicon-comment"></i>Chat</a></p>
-            <p><a href = "#"><i class = "glyphicon glyphicon-log-out"></i>Đăng xuất</a></p>
+            <p><a href = "#"><i class = "glyphicon glyphicon-comment"></i>Chat</a></p>
+            <p><a href = "http://localhost/xampp/new/webBook-main/"><i class = "glyphicon glyphicon-log-out"></i>Đăng xuất</a></p>
         </ul>
     </div>
     <div class="col-sm-10 text-left"> 

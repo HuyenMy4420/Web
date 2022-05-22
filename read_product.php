@@ -47,7 +47,7 @@ if(isset($_POST["saveproduct"])){
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <img src="logo.jpg" style="height:70px"></div>
+      <img src="" style="height:70px"></div>
     </div>
 </nav>
   

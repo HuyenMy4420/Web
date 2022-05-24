@@ -15,9 +15,9 @@ if (!empty($_GET)) {
 
     $s_username = str_replace('\'', '\\\'', $s_username);
 	$s_password      = str_replace('\'', '\\\'', $s_password);
-    $sql="SELECT * FROM users WHERE fullname = '".$s_username."' OR email = '".$s_username."' AND password = '".$s_password."'";
-    $data = executeResult($sql);
-    $sql1="SELECT *FROM user";
+    $sql1="SELECT * FROM users WHERE fullname = '".$s_username."' OR email = '".$s_username."' AND password = '".$s_password."'";
+    // $data = executeResult($sql);
+    // $sql1="SELECT *FROM user";
     $data1 = executeResult($sql1);
     if($data != null ){
         header('Location: \admin\home.php');
